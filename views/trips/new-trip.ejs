@@ -8,5 +8,14 @@
 </head>
 <body>
     <h1>Create a New Trip</h1>
+    <form id="add-new-trip" action="/trips" method="POST">
+        <label>Destination:
+            <input type="text" name="destination">
+        </label>
+        <label>Year:
+            <input type="datetime-local" name="year">
+        </label>
+        <input type="submit" value="Add Trip">
+    </form>
 </body>
 </html>
