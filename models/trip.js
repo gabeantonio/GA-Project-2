@@ -7,7 +7,8 @@ const tripSchema = new Schema({
     },
     year: {
         type: Date
-    }
+    },
+    itinerary: [{type: mongoose.Schema.Types.ObjectId, ref: 'Itinerary'}]
 });
 
 module.exports = mongoose.model('Trip', tripSchema);

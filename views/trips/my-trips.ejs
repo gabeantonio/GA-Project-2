@@ -9,14 +9,14 @@
 <body>
     <h1>My Trips</h1>
     <a href="/trips/new">Create a New Trip</a>
-
+    <br> 
     <% trips.forEach(trip => { %>
         <section id="trip-show-page">
             <div class="my-trips">
                 <div><a href="<%= trip.destination %> <%= trip.year %>"><%= trip.destination %> <%= trip.year %></a></div>
+                <a href="/trips/<%= trip._id %>">Trip Details</a>
             </div>
         </section>
-    
     <% }) %>
 
 

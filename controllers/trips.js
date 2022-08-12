@@ -32,4 +32,8 @@ function create(req,res) {
     })
 }
 
-function show(req, res) {};
+function show(req, res) {
+    Trip.findById(req.params.id, function(err, tripDocument) {
+        res.render('trips/show-trip.ejs', {title: 'Trip', trip: tripDocument})
+    })
+};
