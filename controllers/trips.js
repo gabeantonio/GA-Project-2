@@ -1,5 +1,5 @@
 const Trip = require('../models/trip');
-const Itinerary = require('../models/itinerary');
+
 
 module.exports = {
     index,
@@ -21,7 +21,6 @@ function newTrip(req, res) {
 function create(req,res) {
     // Log what was submitted so you can see. 
     console.log(req.body, '<--- This is what was submitted.');
-
     // Create a new Trip in the Database.
     Trip.create(req.body, function(err, tripDocument) {
         if(err) {
@@ -35,6 +34,7 @@ function create(req,res) {
 
 function show(req, res) {
     Trip.findById(req.params.id, function(err, tripDocument) {
+        
             res.render('trips/show-trip.ejs', {title: 'Trip', trip: tripDocument})
     })
 };

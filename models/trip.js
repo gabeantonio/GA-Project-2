@@ -1,6 +1,25 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const eventSchema = new Schema({
+
+    time: {type: Date},
+
+    event: {type: String}
+    
+});
+
+const itinerarySchema = new Schema({
+    
+    day: {
+        type: Number,
+        min: 1,
+        max: 7
+    },
+    events: [eventSchema]
+});
+
+
 const tripSchema = new Schema({
     destination: {
         type: String
@@ -8,7 +27,10 @@ const tripSchema = new Schema({
     year: {
         type: Date
     },
-    itinerary: [{type: mongoose.Schema.Types.ObjectId, ref: 'Itinerary'}]
+    itinerary: [itinerarySchema]
+    
 });
+
+
 
 module.exports = mongoose.model('Trip', tripSchema);

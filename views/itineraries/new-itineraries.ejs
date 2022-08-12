@@ -10,10 +10,10 @@
     <h1>New Itineraries Here:</h1>
 
     <form id="itinerary-info" method="POST"
-    action='/trips/<%=trip._id%>'>
+    action="/trips/<%= trip._id %>">
     <label>Day:
         <select name="day">
-            <option value="1">1</option>
+            <option value="1" selected>1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -21,12 +21,8 @@
             <option value="6">6</option>
             <option value="7">7</option>
         </select>
-    </label>      
-    <label>Time:</label>
-    <input type="datetime-local" name="eventTime">
-    <label>What's the plan?</label>
-    <textarea name="event"></textarea>
-    <input type="submit" value="Add to Itinerary">
+    </label> 
+    <input type="submit" value="Plan This Day">
     </form>
 </body>
 </html>

@@ -1,5 +1,4 @@
 const Trip = require('../models/trip');
-const Itinerary = require('../models/itinerary');
 
 module.exports = {
     create,
@@ -12,7 +11,7 @@ function create(req,res) {
     Trip.findById(req.params.id, function(err, trip) {
         trip.itinerary.push(req.body);
         trip.save(function(err) {
-            res.redirect(`trips/${req.params.id}`);
+            res.render(`trips/${req.params.id}`, {title: 'Trip', trip: trip});
         })
     })
 }

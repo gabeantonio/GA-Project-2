@@ -13,8 +13,7 @@
     <% trips.forEach(trip => { %>
         <section id="trip-show-page">
             <div class="my-trips">
-                <div><a href="<%= trip.destination %> <%= trip.year %>"><%= trip.destination %> <%= trip.year %></a></div>
-                <a href="/trips/<%= trip._id %>">Trip Itinerary</a>
+                <div><a href="/trips/<%= trip._id %>"><%= trip.destination %> <%= trip.year %></a></div>
             </div>
         </section>
     <% }) %>
