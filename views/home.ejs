@@ -8,7 +8,13 @@
 </head>
 <body>
     <h1>Travel Itineraries!</h1>
-    <a href="/trips">My Trips</a>
+    <% if (user) { %>
+        <a href="/trips">My Trips</a>
+        <a href="/logout">Log Out</a>
+    <% } else { %>
+        <a href="/auth/google" class="login">Log In</a>
+    <% } %>
+
     
 </body>
 </html>
