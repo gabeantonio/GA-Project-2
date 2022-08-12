@@ -8,8 +8,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Trip</h1>
+    <h1>Trip Itinerary</h1>
 
+    <% if (trip.itinerary.length) { %>
+        <div>
+            <% trip.forEach(t => { %>
+            <div><%= t.day %> </div>    
+            <div><%= t.eventTime %> </div>
+            <div><%= t.event %></div>
+            <% }) %>
+        </div>
+    <% } else { %>
+    <h5>No Itineraries Yet</h5>
+    <% } %>
 
+    <a href="/trips/<%= trip._id %>/itineraries/new">Add an Itinerary</a>
 </body>
 </html>

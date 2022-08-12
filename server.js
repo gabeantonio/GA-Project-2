@@ -10,6 +10,7 @@ const passport = require('passport');
 const methodOverride = require('method-override');
 const indexRouter = require('./routes/index');
 const tripsRouter = require('./routes/trips');
+const itinerariesRouter = require('./routes/itineraries');
 // create the Express app
 const app = express();
 
@@ -49,7 +50,8 @@ app.use(function (req, res, next) {
 });
 
 // mount all routes with appropriate base paths
-app.use('/trips', tripsRouter)
+app.use('/trips', tripsRouter);
+app.use('/', itinerariesRouter);
 app.use('/', indexRouter);
 
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>New Itineraries Here:</h1>
+
+    <form id="itinerary-info" method="POST"
+    action='/trips/<%=trip._id%>'>
+    <label>Day:
+        <select name="day">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+    </label>      
+    <label>Time:</label>
+    <input type="datetime-local" name="eventTime">
+    <label>What's the plan?</label>
+    <textarea name="event"></textarea>
+    <input type="submit" value="Add to Itinerary">
+    </form>
+</body>
+</html>

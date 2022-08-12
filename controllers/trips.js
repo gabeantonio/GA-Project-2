@@ -1,4 +1,5 @@
 const Trip = require('../models/trip');
+const Itinerary = require('../models/itinerary');
 
 module.exports = {
     index,
@@ -34,6 +35,6 @@ function create(req,res) {
 
 function show(req, res) {
     Trip.findById(req.params.id, function(err, tripDocument) {
-        res.render('trips/show-trip.ejs', {title: 'Trip', trip: tripDocument})
+            res.render('trips/show-trip.ejs', {title: 'Trip', trip: tripDocument})
     })
 };
