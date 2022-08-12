@@ -3,11 +3,14 @@ const Trip = require('../models/trip');
 module.exports = {
     index,
     new: newTrip,
-    create
+    create,
+    show
 }
 
 function index(req, res) {
-    res.render('trips/my-trips.ejs')
+    Trip.find({}, function(err, trips) {
+        res.render('trips/my-trips.ejs', {title: 'Trips', trips: trips})
+    })
 }
 
 function newTrip(req, res) {
@@ -28,3 +31,5 @@ function create(req,res) {
         res.redirect('/trips');
     })
 }
+
+function show(req, res) {};

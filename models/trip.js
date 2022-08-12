@@ -10,4 +10,4 @@ const tripSchema = new Schema({
     }
 });
 
-
+module.exports = mongoose.model('Trip', tripSchema);
