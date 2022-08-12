@@ -35,7 +35,6 @@ passport.use(new GoogleStrategy({
   }
 ));
 
-
 // This will return the data that passport will add to the cooke to track the User.
 passport.serializeUser(function(user, cb) {
   cb(null, user._id);
@@ -46,7 +45,7 @@ passport.deserializeUser(function(userId, done) {
   User.findById(userId, function(err, userDocument) {
     if(err) return cb(err);
     done(null, userDocument);
-    
+
   })
   // Find your User, using your model, and then call done(err, whateverYourUserIsCalled)
   // When you call this done function passport assigns the user document to req.user, which will 
