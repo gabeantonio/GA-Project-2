@@ -9,9 +9,15 @@ function create(req,res) {
     console.log(req.params.id, '<--- Params Trip ID');
     console.log(req.body, '<--- The itinerary information.');
     Trip.findById(req.params.id, function(err, trip) {
+
+        // req.body.user = req.user._id;
+        // req.body.userName = req.user.name;
+        // req.body.userAvatar = req.user.avatar
+
         trip.itinerary.push(req.body);
+        console.log(trip, '<--- Trip Document with Itinerary');
         trip.save(function(err) {
-            res.render(`trips/${req.params.id}`, {title: 'Trip', trip: trip});
+            res.render('trips/show-trip.ejs', {title: 'Trip', trip: trip})
         })
     })
 }
@@ -19,6 +25,6 @@ function create(req,res) {
 function newItinerary(req, res) {
     // Grab a Trip based on its ID.
     Trip.findById(req.params.id, function(err, trip) {
-        res.render('itineraries/new-itineraries.ejs', {title: 'Trip', trip: trip});
+        res.render('itineraries/new-itineraries', {title: 'Trip', trip: trip});
     })
 }

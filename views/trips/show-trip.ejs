@@ -10,7 +10,17 @@
 <body>
     <h1>Trip Itinerary</h1>
 
+    <label>Itinerary:
+    <% if (trip.length) { %>
+        <% trip.forEach(t => { %>
+         <div><%= t.itinerary._id %></div>
+        <% }) %>
 
-    <a href="/<%= trip._id %>/itineraries/new">Add an Itinerary</a>
+    <% } else { %>
+    <h5>No Itineraries Yet! Would you like to add one?</h5>
+    <% } %>
+    </label>
+    
+    <a href="/trips/<%= trip._id %>/itineraries/new">Add an Itinerary</a>
 </body>
 </html>
