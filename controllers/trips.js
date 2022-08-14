@@ -1,5 +1,5 @@
-const trip = require('../models/trip');
 const Trip = require('../models/trip');
+const { rawListeners } = require('../server');
 
 
 module.exports = {
@@ -10,7 +10,8 @@ module.exports = {
 }
 
 function index(req, res) {
-    Trip.find({}, function(err, trips) {
+    console.log(req.user, '<--- User ID!!!');
+    Trip.find({user: req.user.id}, function(err, trips) {
         res.render('trips/my-trips.ejs', {title: 'Trips', trips: trips})
     })
 }
@@ -20,9 +21,12 @@ function newTrip(req, res) {
 }
 
 function create(req,res) {
-    // Log what was submitted so you can see. 
-    console.log(req.body, '<--- This is what was submitted.');
+    // Log what was submitted so you can see.
+    req.body.user = req.user._id;
+    console.log(req.user, '<--- This is the User')
+    // console.log(req.body, '<--- This is what was submitted.');
     // Create a new Trip in the Database.
+    console.log(req.body, '<--- Req.body')
     Trip.create(req.body, function(err, tripDocument) {
         
         if(err) {
@@ -37,6 +41,6 @@ function create(req,res) {
 function show(req, res) {
     Trip.findById(req.params.id, function(err, tripDocument) {
             console.log(tripDocument, '<--- This is the trip document!!!')
-            res.render(`trips/${tripDocument._id}`, {title: 'Trip', trip: tripDocument})
+            res.render('trips/show-trip.ejs', {title: 'Trip', trip: tripDocument})
     })
 };

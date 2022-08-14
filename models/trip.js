@@ -21,6 +21,9 @@ const itinerarySchema = new Schema({
 
 
 const tripSchema = new Schema({
+    
+    user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+
     destination: {
         type: String
     },

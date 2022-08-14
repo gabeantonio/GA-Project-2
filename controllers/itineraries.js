@@ -17,7 +17,7 @@ function create(req,res) {
         trip.itinerary.push(req.body);
         console.log(trip, '<--- Trip Document with Itinerary');
         trip.save(function(err) {
-            res.render('trips/show-trip.ejs', {title: 'Trip', trip: trip})
+            res.redirect(`/trips/${trip._id}`)
         })
     })
 }
