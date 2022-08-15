@@ -13,7 +13,7 @@
     <label>Itinerary:
     <% if (trip.itinerary.length) { %>
         <% trip.itinerary.forEach(itinerary => { %>
-         <div><%= itinerary.day %></div>
+         <div>Day <%= itinerary.day %> <a href="/trips/<%= trip._id %>/events/new">Add Events</a></div>
         <% }) %>
 
     <% } else { %>
