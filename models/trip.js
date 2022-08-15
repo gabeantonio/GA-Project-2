@@ -5,7 +5,7 @@ const eventSchema = new Schema({
 
     time: {type: Date},
 
-    event: {type: String}
+    activity: {type: String}
     
 });
 
@@ -14,9 +14,9 @@ const itinerarySchema = new Schema({
     day: {
         type: Number,
         min: 1,
-        max: 7
+        max: 7,
+        events: [eventSchema]
     },
-    events: [eventSchema]
 });
 
 
