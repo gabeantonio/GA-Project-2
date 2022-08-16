@@ -6,7 +6,8 @@ module.exports = {
     index,
     new: newTrip,
     create,
-    show
+    show,
+    delete: deleteTrip
 }
 
 function index(req, res) {
@@ -44,3 +45,10 @@ function show(req, res) {
             res.render('trips/show-trip.ejs', {title: 'Trip', trip: tripDocument})
     })
 };
+
+function deleteTrip(req, res) {
+    // Trip.findById(req.params.id, function(err, trips) {
+    // console.log(trips, '<--- Delete Function TEST!')
+    //     // Trip.deleteOne(req.params.id)
+    // })
+}

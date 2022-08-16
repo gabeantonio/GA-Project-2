@@ -3,33 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Knewave&family=Rubik+Maze&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <h1>Trip Itinerary</h1>
+<body id="show-trip-page">
+    <h1 id="trip-name"><%= trip.destination %> <%= trip.year %> </h1>
 
-    <label>Itinerary:
+    <label id="itinerary-header">Trip Overview</label>
+
+    <section id="individual-days">
 
         <br> 
         <br>
 
     <% if (trip.itinerary.length) { %>
         <% trip.itinerary.forEach(itinerary => { %>
+        <div class="days">    
         <div>Day <%= itinerary.day %> 
-        <a href="/trips/<%= trip._id %>/day/<%= itinerary._id%>">See Itinerary for this Day</a>
+        <a id="see-itinerary" href="/trips/<%= trip._id %>/day/<%= itinerary._id%>">See Itinerary</a>
+        </div>
         </div>
         <% }) %>
 
     <% } else { %>
-    <h5>No Itineraries Yet! Would you like to add one?</h5>
+    <h5 id="no-itinerary">No Itineraries Yet! Would you like to add one?</h5>
     <% } %>
-    </label>
+    </section>
 
     <br>
     <br>
 
-    <a href="/trips/<%= trip._id %>/itineraries/new">Add an Itinerary</a>
+    <a id="add-itinerary" href="/trips/<%= trip._id %>/itineraries/new">Add an Itinerary</a>
+    <a id="show-trip-return" href="/trips">Back to My Trips</a>
 </body>
 </html>

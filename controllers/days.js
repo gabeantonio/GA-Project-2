@@ -8,6 +8,7 @@ module.exports = {
 function show(req, res) {
     Trip.findById(req.params.id, function(err, tripDocument) {
             let day;
+
             for (let i = 0; i < tripDocument.itinerary.length; i++) {
                 if (tripDocument.itinerary[i]._id == req.params.dayId) {
                     day = tripDocument.itinerary[i].day

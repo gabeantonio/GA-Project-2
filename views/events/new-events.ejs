@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Knewave&family=Rubik+Maze&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <h1>Create an Event</h1>
+<body id="new-events-form">
+    <h1 id="create-event-header">What You Bout To Get Into?</h1>
+
+    <form id="add-events-form" method="POST"
+    action="/trips/<%= trip._id %>/day/<%= day %>">      
+    <label id="time-label">Time:</label>
+    <input id="time" type="time" name="time">
+
+    <label id="event-label">Activity:</label>
+    <textarea id="event" name="activity"></textarea>
+    <input id="submit-event" type="submit" value="Add to Today's Itinerary">
+    </form>
+
 </body>
 </html>

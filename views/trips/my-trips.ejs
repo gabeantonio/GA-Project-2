@@ -10,17 +10,21 @@
 </head>
 <body id="my-trips-page">
     <h1 id="my-trips-header">My Trips</h1>
-    <a href="/trips/new">Create a New Trip</a>
+    <a id="create-trip-link" href="/trips/new">Add a New Trip</a>
     <br> 
     <% trips.forEach(trip => { %>
         <section id="trip-show-page">
             <div class="my-trips">
-                <div><a href="/trips/<%= trip._id %>"><%= trip.destination %> <%= trip.year %></a></div>
+                <div><a id="trip-link" href="/trips/<%= trip._id %>"><%= trip.destination %> <%= trip.year %></a>
+                    <form id="delete-trip-form" action="/trips?_method=DELETE" method="POST">
+                        <button id="delete-trip-button" type="submit">Delete Trip</button>
+                    </form>
+                </div>
             </div>
         </section>
     <% }) %>
 
-
-
+    <a id="my-trips-logout" href="/logout">Log Out</a>
+    
 </body>
 </html>

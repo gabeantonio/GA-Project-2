@@ -9,13 +9,14 @@
     <title>Document</title>
 </head>
 <body id="log-in-page">
-    <h1 id="project-title">You're Trippin!</h1>
     <% if (user) { %>
         <nav id="home-nav">
+            <h1 id="welcome-title">Welcome in, <%= user.name %>!</h1>
             <a id="logout" href="/logout">Log Out</a>
-            <a id="my-trips" href="/trips">My Trips</a>
+            <a id="my-trips" href="/trips">Your Trips</a>
         </nav>
     <% } else { %>
+        <h1 id="project-title">You're Trippin!</h1>
         <a id="login" href="/auth/google">Log In</a>
     <% } %>
 

@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Knewave&family=Rubik+Maze&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <h1>Create a New Trip</h1>
+<body id="new-trip-form">
+    <h1 id="new-trip-header">Where Ya Off To?</h1>
     <form id="add-new-trip" action="/trips" method="POST">
-        <label>Destination:
+        <label id="destination">Destination:
             <input type="text" name="destination">
         </label>
-        <label>Year:
-            <input type="datetime-local" name="year">
+        <br>
+        <label id="year">Year:
+            <input type="text" name="year">
         </label>
-        <input type="submit" value="Add Trip">
+        <input id="submit-trip" type="submit" value="Add Trip">
     </form>
 </body>
 </html>

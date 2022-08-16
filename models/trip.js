@@ -15,8 +15,8 @@ const itinerarySchema = new Schema({
         type: Number,
         min: 1,
         max: 7,
-        events: [eventSchema]
     },
+    events: [eventSchema]
 });
 
 
@@ -28,7 +28,9 @@ const tripSchema = new Schema({
         type: String
     },
     year: {
-        type: Date
+        type: Number,
+        min: 2022,
+        max: 9999
     },
     itinerary: [itinerarySchema]
     
