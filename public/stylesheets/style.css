@@ -18,3 +18,90 @@
 .collection-item form {
   margin-top: -5px;
 }
+/* Home Page:
+*/
+#log-in-page {
+    background-image: url('https://media3.giphy.com/media/l46Cx5kVr1DRtfV8Q/giphy.gif?cid=ecf05e47k4cjmlednds57s4ellydtuy3zacmqdl4z4q7mg0o&rid=giphy.gif&ct=g');
+    background-size: cover;
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+
+#project-title {
+
+  color: #FF4E00;
+  font-family: 'Bungee Shade', cursive;
+  font-size: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 300px;
+}
+
+#login {
+
+  color: #FF4E00;
+  font-family: 'Bungee Shade', cursive;
+  font-size: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 300px;
+}
+
+#home-nav {
+
+  font-family: 'Bungee Shade', cursive;
+  font-size: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: relative;
+  top: 300px;
+}
+
+#logout {
+  
+  color: #FF4E00;
+}
+
+#my-trips {
+
+  color: #FF4E00;
+}
+
+/* My Trips Page
+*/ 
+
+#my-trips-header {
+
+  font-family: 'Bungee Shade', cursive;
+}
+
+#my-trips-page {
+
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
