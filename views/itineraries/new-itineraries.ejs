@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Knewave&family=Rubik+Maze&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
-    <h1>New Itineraries Here:</h1>
+<body id="new-itineraries-page">
+    <h1 id="new-itinerary-header">Which Day Do You Want To Plan?</h1>
 
     <form id="itinerary-info" method="POST"
     action="/trips/<%=trip._id%>">
-    <label>Day:
+    <label id="day-form">Day:
         <select name="day">
             <option value="1" selected>1</option>
             <option value="2">2</option>
@@ -22,7 +24,7 @@
             <option value="7">7</option>
         </select>
     </label> 
-    <input type="submit" value="Plan This Day">
+    <input id="plan-day-button" type="submit" value="Plan This Day">
     </form>
 </body>
 </html>

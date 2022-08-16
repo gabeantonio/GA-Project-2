@@ -133,7 +133,7 @@
   flex-direction: row;
   justify-content: center;
   position: relative;
-  top: 15px;
+  top: 1px;
 }
 
 #delete-trip-button {
@@ -149,18 +149,54 @@
   color: white;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-end;
   position: relative;
-  top: 520px;
+  bottom: 245px;
   
 
 }
 
+/* New Itinerary Form Page
+*/
 
+#new-itineraries-page {
+  background-image: url(https://images8.alphacoders.com/116/thumb-1920-1164607.png);
+  background-size: 107%;
+}
 
+#new-itinerary-header {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 40px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 20px;
+}
 
+#day-form {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 250px;
+}
 
-
+#plan-day-button {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 20px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 300px;
+  left: 575px;
+}
 
 
 /* New Trip Form Page
@@ -274,7 +310,7 @@
   flex-direction: row;
   justify-content: center;
   position: relative;
-  top: 510px;
+  top: 480px;
 }
 
 #see-itinerary {
