@@ -12,7 +12,7 @@ const indexRouter = require('./routes/index');
 const tripsRouter = require('./routes/trips');
 const itinerariesRouter = require('./routes/itineraries');
 const daysRouter = require('./routes/days');
-
+const eventsRouter = require('./routes/events');
 // create the Express app
 const app = express();
 
@@ -56,6 +56,7 @@ app.use('/trips', tripsRouter);
 app.use('/', itinerariesRouter);
 app.use('/', indexRouter);
 app.use('/', daysRouter);
+app.use('/', eventsRouter);
 
 
 
