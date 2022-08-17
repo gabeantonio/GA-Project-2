@@ -2,7 +2,8 @@ const Trip = require('../models/trip');
 
 module.exports = {
     create,
-    new: newItinerary
+    new: newItinerary,
+    delete: deleteItinerary
 }
 
 function create(req,res) {
@@ -27,4 +28,8 @@ function newItinerary(req, res) {
     Trip.findById(req.params.id, function(err, trip) {
         res.render('itineraries/new-itineraries', {title: 'Trip', trip: trip});
     })
+}
+
+function deleteItinerary(req, res) {
+    console.log('HELLOOO!!!!!!!!!')
 }

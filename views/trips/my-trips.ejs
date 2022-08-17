@@ -11,6 +11,7 @@
 <body id="my-trips-page">
     <h1 id="my-trips-header">My Trips</h1>
     <a id="create-trip-link" href="/trips/new">Add a New Trip</a>
+    <a id="my-trips-logout" href="/logout">Log Out</a>
     <br> 
     <% trips.forEach(trip => { %>
         <section id="trip-show-page">
@@ -24,7 +25,5 @@
         </section>
     <% }) %>
 
-    <a id="my-trips-logout" href="/logout">Log Out</a>
-    
 </body>
 </html>

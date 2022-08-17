@@ -149,11 +149,9 @@
   color: white;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  position: relative;
-  bottom: 245px;
-  
-
+  position: absolute;
+  top: 10px;
+  left: 1230px;
 }
 
 /* New Itinerary Form Page
