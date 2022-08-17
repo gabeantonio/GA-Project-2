@@ -2,8 +2,7 @@ const Trip = require('../models/trip');
 
 module.exports = {
     create,
-    new: newItinerary,
-    delete: deleteItinerary
+    new: newItinerary
 }
 
 function create(req,res) {
@@ -30,6 +29,15 @@ function newItinerary(req, res) {
     })
 }
 
-function deleteItinerary(req, res) {
-    console.log('HELLOOO!!!!!!!!!')
-}
+// function deleteItinerary(req, res) {
+//     Trip.findById(req.params.id, function(err, trip) {
+//         for (let i = 0; i < trip.itinerary.length; i++) {
+//             console.log(trip.itinerary[i]._id, '<---- LOOK HERE GABE!!!');
+            
+//             Trip.findByIdAndRemove(trip.itinerary[i]._id, function() {
+//                 res.redirect(`trips/${trip._id}`);
+//                 console.log(trip, '<--- THIS SHOULD BE THE TRIP WITHOUT THE ITINERARY!!!!')
+//             });
+//         }
+//     })
+// }

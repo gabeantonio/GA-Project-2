@@ -23,9 +23,6 @@
         <div class="days">    
         <div>Day <%= itinerary.day %> 
         <a id="see-itinerary" href="/trips/<%= trip._id %>/day/<%= itinerary._id%>">See Itinerary</a>
-            <form id="delete-day-button" method="POST" action="/trips/<%= trip._id %>/day/<%= itinerary._id%>?_method=DELETE">
-                <button id="delete-day-button" type="submit">Delete Day</button>
-            </form>
         </div>
         </div>
         <% }) %>
