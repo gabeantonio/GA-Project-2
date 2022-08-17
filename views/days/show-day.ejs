@@ -11,16 +11,26 @@
 <body id="show-day">
     <h1 id="day-header">Day <%= day %> </h1>
 
+    <div>
+    <% if (events.length) { %>
 
+        <% events.forEach(event => { %>
 
+            <div>Event:
+                <ul>
+                    <li><%= event.time %></li>
+                    <li><%= event.activity %></li>
+                </ul>
+            </div>
 
+        <% }) %>
 
+        <% } else { %>
 
+        <% } %>
+    <div>
 
-
-
-
-
+    
     <a id="add-event-link"href="/trips/<%= trip._id %>/day/<%= itinerary._id %>/events/new">Add An Event</a>
     <a id="back-to-trip" href="/trips/<%= trip._id %>">Trip Navigation</a>
 </body>

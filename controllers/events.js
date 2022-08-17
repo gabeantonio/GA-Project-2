@@ -17,24 +17,20 @@ function newEvent(req, res) {
 }
 
 function create(req, res) {
-
+    Trip.findById(req.params.id, function(err, tripDocument) {
+        console.log(tripDocument, '<--- EVENT CREATION!!');
+        let events;
+        let itinerary;
+        for (let i = 0; i < tripDocument.itinerary.length; i++) {
+            itinerary = tripDocument.itinerary[i]._id;
+            day = tripDocument.itinerary[i].day;
+            events = tripDocument.itinerary[i].events;
+            events.push(req.body);
+            console.log(events, '<--- EVENTS!!!')
+            console.log(tripDocument, '<---- TRIP WITH EVENTS???');
+            tripDocument.save(function(err) {
+                res.render('days/show-day.ejs', {title: 'Trip', trip: tripDocument});
+            })
+        }
+    })
 }
-
-
-// function create(req,res) {
-//     // Log what was submitted so you can see.
-//     req.body.user = req.user._id;
-//     console.log(req.user, '<--- This is the User')
-//     // console.log(req.body, '<--- This is what was submitted.');
-//     // Create a new Trip in the Database.
-//     console.log(req.body, '<--- Req.body')
-//     Trip.create(req.body, function(err, tripDocument) {
-        
-//         if(err) {
-//             console.log('Error in the Create Trip Controller!');
-//             return res.render('trips/new-trip.ejs')
-//         }
-//         console.log(tripDocument, '<--- Trip created in Database.');
-//         res.redirect('/trips');
-//     })
-// }

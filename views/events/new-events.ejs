@@ -14,7 +14,7 @@
     <form id="add-events-form" method="POST"
     action="/trips/<%= trip._id %>/day/<%= day %>">      
     <label id="time-label">Time:</label>
-    <input id="time" type="time" name="time">
+    <input id="time" type="datetime-local" name="time">
 
     <label id="event-label">Activity:</label>
     <textarea id="event" name="activity"></textarea>
