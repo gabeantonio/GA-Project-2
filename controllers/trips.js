@@ -46,9 +46,8 @@ function show(req, res) {
     })
 };
 
-function deleteTrip(req, res) {
-    // Trip.findById(req.params.id, function(err, trips) {
-    // console.log(trips, '<--- Delete Function TEST!')
-    //     // Trip.deleteOne(req.params.id)
-    // })
+function deleteTrip(req, res){
+    Trip.findByIdAndRemove(req.params.id, function() {
+        res.redirect('/trips')
+    });
 }
