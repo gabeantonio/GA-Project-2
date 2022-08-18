@@ -22,22 +22,22 @@ function editPlan(req, res) {
 }
 
 function updatePlan(req, res) {
-    Trip.findById(req.params.id, function(err, tripDocument) {
-        console.log('HELLOO!!!!!')
-        let index = tripDocument.itinerary.map(itinerary => itinerary.id).indexOf(req.params.dayId);
-        let itinerary = tripDocument.itinerary[index]._id;
-        let day = tripDocument.itinerary[index].day;
-        let events = tripDocument.itinerary[index].events;
-        events = [];
-        events.push(req.body);
-        tripDocument.save(function(err) {
-            if(err) {
-                res.redirect(`/trips/${tripDocument._id}`)
-            } else {
-                res.redirect(`/trips/${tripDocument._id}/day/${itinerary}`)
-            }
-        })
-    })
+    // Trip.findById(req.params.id, function(err, tripDocument) {
+    //     console.log('HELLOO!!!!!')
+    //     let index = tripDocument.itinerary.map(itinerary => itinerary.id).indexOf(req.params.dayId);
+    //     let itinerary = tripDocument.itinerary[index]._id;
+    //     let day = tripDocument.itinerary[index].day;
+    //     let events = tripDocument.itinerary[index].events;
+    //     events = [];
+    //     events.push(req.body);
+    //     tripDocument.save(function(err) {
+    //         if(err) {
+    //             res.redirect(`/trips/${tripDocument._id}`)
+    //         } else {
+    //             res.redirect(`/trips/${tripDocument._id}/day/${itinerary}`)
+    //         }
+    //     })
+    // })
 }
 
 // function create(req, res) {

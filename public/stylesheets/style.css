@@ -458,7 +458,16 @@
   justify-content: center;
 }
 
-
+#update-events-form {
+  font-family: 'Bungee Shade', cursive;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 350px;
+}
 
 
 

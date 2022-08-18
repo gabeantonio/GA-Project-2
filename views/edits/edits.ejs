@@ -14,11 +14,11 @@
 <body id="edits-page">
     <h1 id="edits-page-header">Changed Your Mind?</h1>
 
-    <form id="update-events-from" method="POST" action="/trips/<%= trip._id %>/day/<%= itinerary %>">
-        <label id="time-label">New Time:</label>
+    <form id="update-events-form" method="POST" action="/trips/<%= trip._id %>/day/<%= itinerary %>">
+        <label id="time-label">Time:</label>
         <input id="time" type="datetime-local" name="time">
 
-        <label id="event-label">New Activity:</label>
+        <label id="event-label">Activity:</label>
         <textarea id="event" name="activity"></textarea>
         <input id="submit-event" type="submit" value="Update Plan">
     </form>
