@@ -8,11 +8,11 @@ module.exports = {
 
 function newEvent(req, res) {
     Trip.findById(req.params.id, function(err, tripDocument) {
-        let day;
-        for (let i = 0; i < tripDocument.itinerary.length; i++) {
-            day = tripDocument.itinerary[i]._id;
-        }
-        res.render('events/new-events.ejs', {title: 'Trip', trip: tripDocument, day})
+        console.log(tripDocument, '<--- TRIP')
+
+        const itinerary = tripDocument.itinerary.id(req.params.dayId)
+
+        res.render('events/new-events.ejs', {title: 'Trip', trip: tripDocument, itinerary})
     })
 }
 
@@ -22,19 +22,18 @@ function create(req, res) {
     Trip.findById(req.params.id, function(err, tripDocument) {
         console.log(tripDocument, '<----- TRIP!!!!!!');
         console.log(req.params.dayId, '<------ REQ PARAMS DAY ID')
-        let index = tripDocument.itinerary.map(itinerary => itinerary.id).indexOf(req.params.dayId)
-        console.log(index, '<--- This is the index')
-        let itinerary = tripDocument.itinerary[index]._id;
-        let day = tripDocument.itinerary[index].day;
-        let events = tripDocument.itinerary[index].events;
-        events.push(req.body);
+        let dayDocument = tripDocument.itinerary.id(req.params.dayId)
+        // console.log(index, '<--- This is the index')
+        console.log(dayDocument, '<---- DAY DOCUMENT')
+        console.log(req.params.dayId, '<---- DAY ID')
+
+        dayDocument.events.push(req.body);
         tripDocument.save(function(err) {
             if(err) {
                 res.redirect(`/trips/${tripDocument._id}`)
             } else {
-            console.log(tripDocument._id, '<---- Trip ID!!!!!!!!!');
-            console.log(day, '<---- DAY!!!!!!!')
-            res.redirect(`/trips/${tripDocument._id}/day/${itinerary}`)
+            console.log(tripDocument, '<---- SAVED TRIP')
+            res.redirect(`/trips/${tripDocument._id}/day/${dayDocument._id}`)
             }
         })
 })

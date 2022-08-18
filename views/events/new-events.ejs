@@ -14,7 +14,7 @@
 <body id="new-events-form">
     <h1 id="create-event-header">What You Bout To Get Into?</h1>
 
-    <form id="add-events-form" method="POST" action="/trips/<%= trip._id %>/day/<%= day %>">
+    <form id="add-events-form" method="POST" action="/trips/<%= trip._id %>/day/<%= itinerary._id %>">
         <label id="time-label">Time:</label>
         <input id="time" type="datetime-local" name="time">
 
