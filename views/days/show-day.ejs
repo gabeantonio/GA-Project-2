@@ -11,22 +11,20 @@
 <body id="show-day">
     <h1 id="day-header">Day <%= day %> </h1>
 
-    <div>
+    <div id="plans">
     <% if (events.length) { %>
         <% events.forEach(event => { %>
-            <div>Event:
+            <div id="event">Event:
                 <ul>
-                    <li><%= event.time %></li>
-                    <li><%= event.activity %></li>
+                <li id="list-time"><%= event.time %></li>
+                <li id="list-activity"><%= event.activity %></li>
+                <a id="edit" href="/trips/<%= trip._id %>/day/<%= itinerary._id %>/events/edit">Edit Plan</a>
                 </ul>
             </div>
         <% }) %>
         <% } else { %>
         <% } %>
     <div>
-
-
-
 
 
 

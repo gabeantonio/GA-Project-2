@@ -20,7 +20,7 @@
 
     <% if (trip.itinerary.length) { %>
         <% trip.itinerary.forEach(itinerary => { %>
-        <div class="days">    
+        <div id="days">    
         <div>Day <%= itinerary.day %> 
         <a id="see-itinerary" href="/trips/<%= trip._id %>/day/<%= itinerary._id%>">See Itinerary</a>
         </div>

@@ -293,12 +293,13 @@
 
 #individual-days {
   color: white;
-  font-size: 25px;
+  font-size: 35px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: relative;
-  top: 20px;
+  top: 65px;
 }
 
 #show-trip-return {
@@ -312,12 +313,12 @@
 }
 
 #see-itinerary {
-  color: #CCB6EC;
+  color: #00FF9D;
 }
 
 
 
-/* Day Show Page
+/* Show Day Page
 */
 
 #show-day {
@@ -333,6 +334,7 @@
   flex-direction: row;
   justify-content: center;
 }
+
 
 #add-event-link {
   font-family: 'Bungee Shade', cursive;
@@ -358,6 +360,26 @@
   left: 600px;
 }
 
+#plans {
+  font-family: 'Bungee Shade', cursive;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#events {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#activity {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 
 /* New Events Form Page
@@ -418,6 +440,23 @@
 }
 
 
+
+/* Edits Page
+*/ 
+
+#edits-page {
+  background-image: url(https://qph.cf2.quoracdn.net/main-qimg-3d49e049d6e54cd13493f05501fe2e3f);
+  background-size: 100%;
+}
+
+#edits-page-header {
+  font-family: 'Bungee Shade', cursive;
+  color: white;
+  font-size: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 
 

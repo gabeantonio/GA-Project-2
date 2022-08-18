@@ -13,6 +13,7 @@ const tripsRouter = require('./routes/trips');
 const itinerariesRouter = require('./routes/itineraries');
 const daysRouter = require('./routes/days');
 const eventsRouter = require('./routes/events');
+const editsRouter = require('./routes/edits')
 // create the Express app
 const app = express();
 
@@ -57,7 +58,7 @@ app.use('/', itinerariesRouter);
 app.use('/', indexRouter);
 app.use('/', daysRouter);
 app.use('/', eventsRouter);
-
+app.use('/', editsRouter);
 
 
 // invalid request, send 404 page
