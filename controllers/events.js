@@ -16,36 +16,36 @@ function newEvent(req, res) {
     })
 }
 
-function create(req, res) {
-    Trip.findById(req.params.id, function(err, tripDocument) {
-      // Update req.body to contain user info
-    req.body.userId = req.user._id;
-    req.body.userName = req.user.name;
-      // Add the comment
-    trip.itinerary.events.push(req.body);
-    trip.save(function(err) {
-        res.redirect(`/trips/${trip._id}/day/${trip.itinerary.day._id}`);
-    });
-    });
-}
-
-
-
 // function create(req, res) {
 //     Trip.findById(req.params.id, function(err, tripDocument) {
-//         console.log(tripDocument, '<--- EVENT CREATION!!');
-//         let events;
-//         let itinerary;
-//         for (let i = 0; i < tripDocument.itinerary.length; i++) {
-//             itinerary = tripDocument.itinerary[i]._id;
-//             day = tripDocument.itinerary[i].day;
-//             events = tripDocument.itinerary[i].events;
-//             events.push(req.body);
-//             console.log(events, '<--- EVENTS!!!')
-//             console.log(tripDocument, '<---- TRIP WITH EVENTS???');
-//             tripDocument.save(function(err) {
-//                 res.render('days/show-day.ejs', {title: 'Trip', trip: tripDocument});
-//             })
-//         }
-//     })
+//     trip.itinerary.events.push(req.body);
+//     trip.save(function(err) {
+//         console.log(err, '<--- Error Message');
+//         res.redirect(`/`);
+//     });
+//     });
 // }
+
+function create(req, res) {
+
+    Trip.findById(req.params.id, function(err, tripDocument) {
+        console.log(tripDocument, '<----- TRIP!!!!!!');
+        console.log(req.params.dayId, '<------ REQ PARAMS DAY ID')
+        let index = tripDocument.itinerary.map(itinerary => itinerary.id).indexOf(req.params.dayId)
+        console.log(index, '<--- This is the index')
+        let itinerary = tripDocument.itinerary[index]._id;
+        let day = tripDocument.itinerary[index].day;
+        let events = tripDocument.itinerary[index].events;
+        events.push(req.body);
+        tripDocument.save(function(err) {
+            if(err) {
+                res.redirect(`/trips/${tripDocument._id}`)
+            } else {
+            console.log(tripDocument._id, '<---- Trip ID!!!!!!!!!');
+            console.log(day, '<---- DAY ID!!!!!!!')
+            res.redirect(`/trips/${tripDocument._id}/day/${itinerary}`)
+            }
+        })
+})
+}
+
