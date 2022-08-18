@@ -16,15 +16,6 @@ function newEvent(req, res) {
     })
 }
 
-// function create(req, res) {
-//     Trip.findById(req.params.id, function(err, tripDocument) {
-//     trip.itinerary.events.push(req.body);
-//     trip.save(function(err) {
-//         console.log(err, '<--- Error Message');
-//         res.redirect(`/`);
-//     });
-//     });
-// }
 
 function create(req, res) {
 
@@ -42,7 +33,7 @@ function create(req, res) {
                 res.redirect(`/trips/${tripDocument._id}`)
             } else {
             console.log(tripDocument._id, '<---- Trip ID!!!!!!!!!');
-            console.log(day, '<---- DAY ID!!!!!!!')
+            console.log(day, '<---- DAY!!!!!!!')
             res.redirect(`/trips/${tripDocument._id}/day/${itinerary}`)
             }
         })

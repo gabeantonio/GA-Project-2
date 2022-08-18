@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Knewave&family=Rubik+Maze&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Knewave&family=Rubik+Maze&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body id="show-day">
-    <h1 id="day-header">Day <%= day %> </h1>
+    <h1 id="day-header">Day <%= day %>
+    </h1>
 
     <div id="plans">
-    <% if (events.length) { %>
-        <% events.forEach(event => { %>
-            <div id="event">Event:
-                <ul>
-                <li id="list-time"><%= event.time %></li>
-                <li id="list-activity"><%= event.activity %></li>
-                <a id="edit" href="/trips/<%= trip._id %>/day/<%= itinerary._id %>/events/edit">Edit Plan</a>
-                </ul>
-            </div>
-        <% }) %>
-        <% } else { %>
-        <% } %>
-    <div>
+        <% if (events.length) { %>
+            <% events.forEach(event=> { %>
+                <div id="event">Event:
+                    <ul>
+                        <li id="list-time">
+                            <%= event.time %>
+                        </li>
+                        <li id="list-activity">
+                            <%= event.activity %>
+                        </li>
+                        <a id="edit" href="/trips/<%= trip._id %>/day/<%= itinerary._id %>/events/edit">Edit Plan</a>
+                    </ul>
+                </div>
+                <% }) %>
+                    <% } else { %>
+                        <% } %>
+                            <div>
 
 
 
-    <a id="add-event-link"href="/trips/<%= trip._id %>/day/<%= itinerary._id %>/events/new">Add An Event</a>
-    <a id="back-to-trip" href="/trips/<%= trip._id %>">Trip Navigation</a>
+                                <a id="add-event-link"
+                                    href="/trips/<%= trip._id %>/day/<%= itinerary._id %>/events/new">Add An Event</a>
+                                <a id="back-to-trip" href="/trips/<%= trip._id %>">Trip Navigation</a>
 </body>
+
 </html>

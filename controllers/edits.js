@@ -1,4 +1,3 @@
-const trip = require('../models/trip');
 const Trip = require('../models/trip');
 
 module.exports = {
@@ -7,7 +6,7 @@ module.exports = {
 }
 
 function editPlan(req, res) {
-    Trip.findById(req.params.id, function(err, tripDocument) {
+    Trip.findById(req.params.id, function (err, tripDocument) {
         console.log(tripDocument, '<---- EDIT THIS!!!!!!!')
         let itinerary;
         let day;
@@ -17,27 +16,28 @@ function editPlan(req, res) {
             day = tripDocument.itinerary[i].day
             events = tripDocument.itinerary[i].events
         }
-        res.render('edits/edits.ejs', {title: 'Trip', trip: tripDocument, itinerary, day, events})
+        res.render('edits/edits.ejs', { title: 'Trip', trip: tripDocument, itinerary, day, events })
     })
 }
 
 function updatePlan(req, res) {
-    // Trip.findById(req.params.id, function(err, tripDocument) {
-    //     console.log('HELLOO!!!!!')
-    //     let index = tripDocument.itinerary.map(itinerary => itinerary.id).indexOf(req.params.dayId);
-    //     let itinerary = tripDocument.itinerary[index]._id;
-    //     let day = tripDocument.itinerary[index].day;
-    //     let events = tripDocument.itinerary[index].events;
-    //     events = [];
-    //     events.push(req.body);
-    //     tripDocument.save(function(err) {
-    //         if(err) {
-    //             res.redirect(`/trips/${tripDocument._id}`)
-    //         } else {
-    //             res.redirect(`/trips/${tripDocument._id}/day/${itinerary}`)
-    //         }
-    //     })
-    // })
+    Trip.findById(req.params.id, function (err, tripDocument) {
+        let index = tripDocument.itinerary.map(itinerary => itinerary.id).indexOf(req.params.dayId);
+        console.log(index, '<---- THIS IS THE INDEX')
+        let itinerary = tripDocument.itinerary[index]._id;
+        let day = tripDocument.itinerary[index].day;
+        let events = tripDocument.itinerary[index].events;
+        events = [];
+        events.push(req.body);
+        console.log(events, '<---- DID THE EVENT SAVE?????')
+        tripDocument.save(function (err) {
+            if (err) {
+                res.redirect(`/trips/${tripDocument._id}`)
+            } else {
+                res.redirect(`/trips/${tripDocument._id}/day/${itinerary}`)
+            }
+        })
+    })
 }
 
 // function create(req, res) {

@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Knewave&family=Rubik+Maze&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Knewave&family=Rubik+Maze&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body id="my-trips-page">
     <h1 id="my-trips-header">My Trips</h1>
     <a id="create-trip-link" href="/trips/new">Add a New Trip</a>
     <a id="my-trips-logout" href="/logout">Log Out</a>
-    <br> 
-    <% trips.forEach(trip => { %>
+    <br>
+    <% trips.forEach(trip=> { %>
         <section id="trip-show-page">
             <div class="my-trips">
-                <div><a id="trip-link" href="/trips/<%= trip._id %>"><%= trip.destination %> <%= trip.year %></a>
+                <div><a id="trip-link" href="/trips/<%= trip._id %>">
+                        <%= trip.destination %>
+                            <%= trip.year %>
+                    </a>
                     <form id="delete-trip-form" method="POST" action="/trips/<%= trip._id %>?_method=DELETE">
                         <button id="delete-trip-button" type="submit">Delete Trip</button>
                     </form>
                 </div>
             </div>
         </section>
-    <% }) %>
+        <% }) %>
 
 </body>
+
 </html>

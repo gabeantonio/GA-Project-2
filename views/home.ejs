@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Knewave&family=Rubik+Maze&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Knewave&family=Rubik+Maze&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body id="log-in-page">
     <% if (user) { %>
         <nav id="home-nav">
@@ -15,11 +18,12 @@
             <a id="logout" href="/logout">Log Out</a>
             <a id="my-trips" href="/trips">Your Trips</a>
         </nav>
-    <% } else { %>
-        <h1 id="project-title">You're Trippin!</h1>
-        <a id="login" href="/auth/google">Log In</a>
-    <% } %>
+        <% } else { %>
+            <h1 id="project-title">You're Trippin!</h1>
+            <a id="login" href="/auth/google">Log In</a>
+            <% } %>
 
-    
+
 </body>
+
 </html>
