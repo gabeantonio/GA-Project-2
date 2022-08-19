@@ -99,7 +99,12 @@ Below are the technologies that made this project possible:
 
 ## Getting Started:
 
-Ready?
+Below is an overview of my Trello board that I used to plan and execute the functionaliy of this project.
+
+![alt text](https://i.imgur.com/sFrzbcK.png)
+
+
+Ready to check it out? No? 
 [You're Trippin!](https://youre-trippin.herokuapp.com/)
 
 
