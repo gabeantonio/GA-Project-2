@@ -77,3 +77,38 @@ On the form above, just like the add plans form, go ahead and put in the time an
 ![alt text](https://i.imgur.com/oqDK2ln.png)
 
 Your original plan was updated and now shows on your Day Itinerary! 
+
+
+## Technologies Used
+
+Below are the technologies that made this project possible:
+
+1. JavaScript
+2. HTML
+3. CSS
+4. Node.js
+5. Express
+6. MongoDB
+7. Mongoose
+8. Trello
+9. Whimsical
+10. GIPHY
+11. Google Fonts
+12. ColorSpace
+
+
+## Getting Started:
+
+Ready?
+[You're Trippin!](https://youre-trippin.herokuapp.com/)
+
+
+## Next Steps
+
+Some features I'd like to add in the future: 
+
+1. Animations when rendering new pages.
+2. Some background music!
+3. Sort out events based on chronological order throughout the day.
+
+
