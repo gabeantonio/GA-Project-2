@@ -26,7 +26,9 @@
                         <li id="list-activity">
                             <%= event.activity %>
                         </li>
-                        <a id="edit" href="/trips/<%= trip._id %>/day/<%= itinerary._id %>/events/edit">Edit Plan</a>
+                        <a id="edit"
+                            href="/trips/<%= trip._id %>/day/<%= itinerary._id %>/events/<%= event._id %>/edit">Edit
+                            Plan</a>
                     </ul>
                 </div>
                 <% }) %>

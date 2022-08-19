@@ -33,6 +33,7 @@ function show(req, res) {
             events = tripDocument.itinerary[index].events;
             itinerary = tripDocument.itinerary[index];
         }
+        console.log(events, '<--- These are the events')
         res.render('days/show-day.ejs', { title: 'Trip', trip: tripDocument, day, events, itinerary });
     })
 }

@@ -9,7 +9,8 @@ function editPlan(req, res) {
     Trip.findById(req.params.id, function (err, tripDocument) {
         console.log(tripDocument, '<--- TRIP')
         const itinerary = tripDocument.itinerary.id(req.params.dayId)
-        res.render('events/edits.ejs', { title: 'Trip', trip: tripDocument, itinerary })
+        const eventid = req.params.eventId;
+        res.render('events/edits.ejs', { title: 'Trip', trip: tripDocument, itinerary, eventid })
     })
 }
 
@@ -18,12 +19,21 @@ function editPlan(req, res) {
 function updatePlan(req, res) {
     Trip.findById(req.params.id, function (err, tripDocument) {
         let dayDocument = tripDocument.itinerary.id(req.params.dayId);
-        console.log(dayDocument, '<---- THIS IS THE DAY YOU WERE ON')
-        console.log(req.body, '<---- WHAT WAS SUBMITTED');
-        dayDocument.events.shift();
-        console.log(dayDocument, '<---- DELETED EVENT IN DAY DOCUMENT');
-        dayDocument.events.unshift(req.body);
-        console.log(dayDocument, '<---- ADDED NEW ACTIVITES')
+        let index = tripDocument.itinerary.map(itinerary => itinerary.id).indexOf(req.params.dayId);
+        let eventIndex = tripDocument.itinerary[index].events.map(event => event.id).indexOf(req.params.eventId);
+        console.log(req.params.eventId, '<----- EVENT ID!!!!!!')
+        console.log(eventIndex, '<---- EVENT INDEX!!!!!!');
+        console.log(index, '<----- INDEX!!!!!');
+        console.log(tripDocument, '<----- TRIP DOC')
+        console.log(tripDocument.itinerary[index].events[eventIndex], '<---- BEFORE')
+        tripDocument.itinerary[index].events[eventIndex] = req.body;
+        console.log(tripDocument.itinerary[index].events[eventIndex], '<---- AFTER');
+        // console.log(dayDocument, '<---- THIS IS THE DAY YOU WERE ON')
+        // console.log(req.body, '<---- WHAT WAS SUBMITTED');
+        // dayDocument.events.shift();
+        // console.log(dayDocument, '<---- DELETED EVENT IN DAY DOCUMENT');
+        // dayDocument.events.unshift(req.body);
+        // console.log(dayDocument, '<---- ADDED NEW ACTIVITES')
         tripDocument.save(function (err) {
             if (err) {
                 res.redirect(`/trips/${tripDocument._id}`)
