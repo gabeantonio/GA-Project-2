@@ -110,6 +110,7 @@ Some features I'd like to add in the future:
 1. Animations when rendering new pages.
 2. Some background music!
 3. Sort out events based on chronological order throughout the day.
+4. Media Queries!
 
 
 ## Special Thanks
