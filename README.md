@@ -111,6 +111,7 @@ Some features I'd like to add in the future:
 2. Some background music!
 3. Sort out events based on chronological order throughout the day.
 4. Media Queries!
+5. Having the option to choose a wallpaper of the user's liking for each trip.
 
 
 ## Special Thanks
