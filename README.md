@@ -112,3 +112,12 @@ Some features I'd like to add in the future:
 3. Sort out events based on chronological order throughout the day.
 
 
+## Special Thanks
+
+Many thanks to:
+
+1. John McCants
+2. Charles Co
+3. James Haff 
+
+For all the support throughout the creation of this project. 
