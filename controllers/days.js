@@ -25,9 +25,6 @@ module.exports = {
 function show(req, res) {
     Trip.findById(req.params.id, function (err, tripDocument) {
         let index = tripDocument.itinerary.map(itinerary => itinerary.id).indexOf(req.params.dayId);
-        // console.log(index, '<---- THIS IS THE INDEX YOU WANT TO SHOW');
-        // console.log(req.params.dayId, '<---- THIS IS THE DAY ID OF THE INDEX');
-        // console.log(tripDocument.itinerary[index]._id, '<---- THIS IS THE ID OF THE ITINERARY AT THIS INDEX ')
         let day;
         let events;
         let itinerary;

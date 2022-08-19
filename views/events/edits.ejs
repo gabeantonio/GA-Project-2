@@ -14,7 +14,7 @@
 <body id="edits-page">
     <h1 id="edits-page-header">Changed Your Mind?</h1>
 
-    <form id="update-events-form" method="POST" action="/trips/<%= trip._id %>/day/<%= itinerary %>?_method=PUT">
+    <form id="update-events-form" method="POST" action="/trips/<%= trip._id %>/day/<%= itinerary._id %>?_method=PUT">
         <label id="time-label">Time:</label>
         <input id="time" type="datetime-local" name="time">
 
