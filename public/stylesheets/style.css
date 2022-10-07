@@ -55,6 +55,31 @@
 a {
   text-decoration: none;
 }
+
+/* MY TRIPS PAGE
+*/ 
+.my-trips-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+.trip-card {
+  display: inline-block;
+  margin-top: 3%;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+.trip-actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
 /* NEW TRIP FORM 
 */
 #new-trip-header {
