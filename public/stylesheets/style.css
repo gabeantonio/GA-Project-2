@@ -55,12 +55,17 @@
 
 /* NEW TRIP FORM 
 */
-
+#new-trip-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
 .new-trip-form {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 7%;
 }
 .add-new-trip {
   width: 40vw;
