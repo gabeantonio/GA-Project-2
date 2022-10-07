@@ -52,7 +52,9 @@
   position: relative;
   top: 300px;
 }
-
+a {
+  text-decoration: none;
+}
 /* NEW TRIP FORM 
 */
 #new-trip-header {
