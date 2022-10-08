@@ -55,7 +55,6 @@
 a {
   text-decoration: none;
 }
-
 /* MY TRIPS PAGE
 */ 
 .my-trips-header {
@@ -77,7 +76,6 @@ a {
   display: flex;
   justify-content: space-evenly;
 }
-
 /* NEW TRIP FORM 
 */
 #new-trip-header {
