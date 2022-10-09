@@ -111,6 +111,47 @@ a {
   margin-top: 3%;
 }
 
+/* SHOW TRIP PAGE
+*/ 
 
-
-
+.trip-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+#no-itineraries {
+  margin-top: 10%;
+}
+.no-itinerary-nav {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin-top: 5%;
+}
+.no-itinerary-back {
+  margin-right: 2%;
+}
+.no-itinerary-new {
+  margin-left: 2%;
+} 
+.itinerary-nav {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+.itinerary-back {
+  margin-right: 2%;
+}
+.itinerary-new {
+  margin-left: 2%;
+}
+#day-cards {
+  margin: 0 auto;
+  margin-top: 5%;
+  max-width: 450px;
+}
