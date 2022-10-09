@@ -13,17 +13,40 @@
 </head>
 
 <body id="new-events-form">
-    <h1 id="create-event-header">What You Bout To Get Into?</h1>
+    
+    <h1 class="create-event-header">Add Plans</h1>
+    <p class="lead">
+        Here, you can add plans to your itineraries.
+    </p>
 
-    <form id="add-events-form" method="POST" action="/trips/<%= trip._id %>/day/<%= itinerary._id %>">
-        <label id="time-label">Time:</label>
-        <input id="time" type="datetime-local" name="time">
 
-        <label id="event-label">Activity:</label>
-        <textarea id="event" name="activity"></textarea>
-        <input id="submit-event" type="submit" value="Add to Today's Itinerary">
+    <form class="add-events-form" method="POST" action="/trips/<%= trip._id %>/day/<%= itinerary._id %>">
+        <div class="mb-3">
+            <label id="time-label" class="form-label">Time:</label>
+            <input type="datetime-local" class="form-control" name="time">
+        </div>
+    
+        <div class="mb-3">
+            <label id="event-label" class="form-label">Activities:</label>
+            <textarea class="form-control" name="activity" rows="3"></textarea>
+        </div>
+
+        <div class="submit-event">
+            <button type="submit" class="btn btn-outline-success" value="Add to Today's Itinerary">Add to Today's Itinerary</button>
+        </div>
     </form>
 
+    <div class="blockquote">
+        <figure>
+            <blockquote class="blockquote">
+                <p>I am the master of my fate, I am the captain of my soul.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                William Ernest Henley, <cite title="Source Title">Invictus</cite>
+            </figcaption>
+        </figure>
+        </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>

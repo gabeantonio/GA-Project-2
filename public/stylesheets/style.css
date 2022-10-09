@@ -155,3 +155,35 @@ a {
   margin-top: 5%;
   max-width: 450px;
 }
+
+/* SHOW DAY PAGE
+*/
+
+.day-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+
+
+/* NEW PLANS PAGE
+*/ 
+.create-event-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+.add-events-form {
+  margin: 0 auto;
+  margin-top: 5%;
+  max-width: 600px;
+}
+.submit-event {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
