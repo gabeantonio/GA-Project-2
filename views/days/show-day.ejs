@@ -26,20 +26,16 @@
 
         <% if (events.length) { %>
             <% events.forEach(event=> { %>
-                <div id="event">Event:
-                    <ul>
-                        <li id="list-time">
-                            <%= event.time %>
-                        </li>
+                <div class="event">
 
-                        <li id="list-activity">
-                            <%= event.activity %>
-                        </li>
+                    <h3 class="event-description">
+                        <%= event.activity %>&nbsp;
+                        <small class="text-muted"> at <%= event.time %></small>
+                    </h3>
 
-                        <a id="edit" href="/trips/<%= trip._id %>/day/<%= itinerary._id %>/events/<%= event._id %>/edit">
-                            Edit Plan
-                        </a>
-                    </ul>
+                    <a class="edit" href="/trips/<%= trip._id %>/day/<%= itinerary._id %>/events/<%= event._id %>/edit">
+                        <button type="button" class="btn btn-outline-success">Edit Plan</button>
+                    </a>
                 </div>
 
             <% }) %>

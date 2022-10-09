@@ -20,40 +20,39 @@
 }
 /* Home Page:
 */
-#log-in-page {
+.log-in-page {
     background-image: url('https://media3.giphy.com/media/l46Cx5kVr1DRtfV8Q/giphy.gif?cid=ecf05e47k4cjmlednds57s4ellydtuy3zacmqdl4z4q7mg0o&rid=giphy.gif&ct=g');
     background-size: cover;
-    height: 100vh;
-    padding:0;
-    margin:0;
+    height: auto;
 }
-
-#project-title {
-
+.project-title {
   color: black;
   font-family: 'Bungee Shade', cursive;
   font-size: 50px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  position: relative;
-  top: 300px;
+  align-items: center;
+  margin-top: 20%
 }
-
-#login {
-
+.login {
   color: black;
   font-family: 'Bungee Shade', cursive;
   font-size: 40px;
   font-weight: bolder;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  position: relative;
-  top: 300px;
+  align-items: center;
 }
 a {
   text-decoration: none;
+}
+@media only screen and (max-width: 600px) {
+  .project-title {
+    font-size: 45px;
+  }
+  .login {
+    font-size: 35px;
+  }
 }
 /* MY TRIPS PAGE
 */ 
@@ -165,8 +164,20 @@ a {
   align-items: center;
   margin-top: 2%;
 }
-
-
+.event {
+  margin-top: 5%;
+}
+.event-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+}
 
 /* NEW PLANS PAGE
 */ 
@@ -187,3 +198,26 @@ a {
   align-items: center;
   margin-top: 10%;
 }
+
+/* NEW DAY PAGE
+*/ 
+.new-itinerary-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+.itinerary-info {
+  margin: 0 auto;
+  margin-top: 7%;
+  max-width: 600px;
+}
+.submit-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+/* UPDATE EVENTS PAGE
+*/ 
