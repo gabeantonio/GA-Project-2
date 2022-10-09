@@ -27,8 +27,8 @@
 }
 .project-title {
   color: black;
-  font-family: 'Bungee Shade', cursive;
-  font-size: 50px;
+  font-family: 'Carter One', cursive;
+  font-size: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,8 +36,8 @@
 }
 .login {
   color: black;
-  font-family: 'Bungee Shade', cursive;
-  font-size: 40px;
+  font-family: 'Carter One', cursive;
+  font-size: 60px;
   font-weight: bolder;
   display: flex;
   justify-content: center;
@@ -45,6 +45,33 @@
 }
 a {
   text-decoration: none;
+}
+.welcome-title {
+  color: black;
+  font-family: 'Carter One', cursive;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20%
+}
+.logout {
+  color: black;
+  font-family: 'Carter One', cursive;
+  font-size: 40px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-trips {
+  color: black;
+  font-family: 'Carter One', cursive;
+  font-size: 40px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media only screen and (max-width: 600px) {
   .project-title {
@@ -219,5 +246,5 @@ a {
   margin-top: 5%;
 }
 
-/* UPDATE EVENTS PAGE
+/* BODIES
 */ 
