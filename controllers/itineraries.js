@@ -16,7 +16,6 @@ function create(req, res) {
 
 function newItinerary(req, res) {
     Trip.findById(req.params.id, function (err, trip) {
-        console.log(trip, '<----- AND ALSO MAYBE HERE???')
         res.render('itineraries/new-itineraries', { title: 'Trip', trip: trip });
     })
 }

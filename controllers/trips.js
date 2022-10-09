@@ -22,10 +22,8 @@ function newTrip(req, res) {
 
 function create(req, res) {
     req.body.user = req.user._id;
-    console.log(req.user, '<--- This is the User!')
     Trip.create(req.body, function (err, tripDocument) {
         if (err) {
-            console.log('Error in the Create Trip Controller!');
             return res.render('trips/new-trip.ejs')
         }
         res.redirect('/trips');

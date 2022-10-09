@@ -1,29 +1,21 @@
 .brand-logo {
   margin-left: 15px;
 }
-
 .card .card-content .card-title {
   margin-bottom: 10px;
 }
-
 #search-row form {
   padding-top: 20px;
 }
-
-.student-name {
-  position: relative;
-  top: -5px;
-}
-
 .collection-item form {
   margin-top: -5px;
 }
+
 /* Home Page:
 */
 .log-in-page {
     background-image: url('https://media3.giphy.com/media/l46Cx5kVr1DRtfV8Q/giphy.gif?cid=ecf05e47k4cjmlednds57s4ellydtuy3zacmqdl4z4q7mg0o&rid=giphy.gif&ct=g');
     background-size: cover;
-    height: auto;
 }
 .project-title {
   color: black;
@@ -49,7 +41,7 @@ a {
 .welcome-title {
   color: black;
   font-family: 'Carter One', cursive;
-  font-size: 60px;
+  font-size: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,14 +65,27 @@ a {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1300px) {
   .project-title {
     font-size: 45px;
   }
   .login {
     font-size: 35px;
   }
+  .log-in-page {
+    background-size: 200vh;
+  }
+  .welcome-title {
+    font-size: 35px;
+  }
+  .my-trips {
+    font-size: 25px;
+  }
+  .logout {
+    font-size: 25px;
+  }
 }
+
 /* MY TRIPS PAGE
 */ 
 .my-trips-header {
@@ -93,15 +98,26 @@ a {
   justify-content: center;
 }
 .trip-card {
-  display: inline-block;
-  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 3%;
   margin-right: 3%;
   margin-left: 3%;
+}
+.card-title {
+  display: flex;
+  justify-content: center;
+}
+#card-year {
+  display: flex;
+  justify-content: center;
 }
 .trip-actions {
   display: flex;
   justify-content: space-evenly;
 }
+
 /* NEW TRIP FORM 
 */
 #new-trip-header {
@@ -139,7 +155,6 @@ a {
 
 /* SHOW TRIP PAGE
 */ 
-
 .trip-name {
   display: flex;
   justify-content: center;
@@ -184,7 +199,6 @@ a {
 
 /* SHOW DAY PAGE
 */
-
 .day-header {
   display: flex;
   justify-content: center;
@@ -246,5 +260,5 @@ a {
   margin-top: 5%;
 }
 
-/* BODIES
+/* IMAGES
 */ 
