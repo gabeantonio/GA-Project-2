@@ -13,21 +13,24 @@
 
 <body class="my-trips-body">
     <h1 class="my-trips-header">My Trips</h1>
+    <p class="lead">
+        All Trips
+    </p>
     <div class="navbar">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="/trips/new">
-                    <button type="button" class="btn btn-outline-success">Add New Trip</button>
+                    <button type="button" class="btn btn-success">Add New Trip</button>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/">
-                    <button type="button" class="btn btn-outline-primary">Home</button>
+                    <button type="button" class="btn btn-primary">Home</button>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/logout">
-                    <button type="button" class="btn btn-outline-danger">Log Out</button>
+                    <button type="button" class="btn btn-danger">Log Out</button>
                 </a>
             </li>
         </ul>
@@ -36,19 +39,21 @@
     <% trips.forEach(trip=> { %>
     
     <div class="trip-card">
-        <div class="card" style="width: 25rem;">
-            <section class="trip-show-page">
-                <div class="card-body">
-                    <h5 class="card-title"><%= trip.destination %></h5>
-                    <h6 id="card-year" class="card-subtitle mb-2 text-muted"><%= trip.year %></h6>
-                    <div class="trip-actions">
-                        <a class="btn btn-outline-primary btn-sm" href="/trips/<%= trip._id %>" role="button">View Trip</a>
-                        <form class="delete-trip-form" method="POST" action="/trips/<%= trip._id %>?_method=DELETE">
-                            <button type="submit" id="delete-trip-btn" class="btn btn-danger btn-sm">Delete Trip</button>
-                        </form>
+        <div class="shadow-lg p-3 mb-5 bg-body rounded">
+            <div class="card" style="width: 25rem;">
+                <section class="trip-show-page">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= trip.destination %></h5>
+                        <h6 id="card-year" class="card-subtitle mb-2 text-muted"><%= trip.year %></h6>
+                        <div class="trip-actions">
+                            <a class="btn btn-outline-primary btn-sm" href="/trips/<%= trip._id %>" role="button">View Trip</a>
+                            <form class="delete-trip-form" method="POST" action="/trips/<%= trip._id %>?_method=DELETE">
+                                <button type="submit" id="delete-trip-btn" class="btn btn-danger btn-sm">Delete Trip</button>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            </section>  
+                </section>  
+            </div>
         </div>
     </div>
 

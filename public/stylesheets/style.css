@@ -100,7 +100,7 @@ a {
 .trip-card {
   display: flex;
   justify-content: center;
-  margin-top: 2%;
+  margin-top: 1%;
   margin-bottom: 3%;
   margin-right: 3%;
   margin-left: 3%;
@@ -262,3 +262,31 @@ a {
 
 /* IMAGES
 */ 
+.my-trips-body {
+  background-image: url('https://images.unsplash.com/photo-1593182440709-4b7b56482c55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+  background-size: 100%;
+}
+.new-trip-body {
+  background-image: url('https://images.unsplash.com/photo-1503795558777-38b60c1e5009?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
+  background-size: 100%;
+}
+.show-trip-body {
+  background-image: url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+  background-size: 100%;
+}
+.new-itineraries-body {
+  background-image: url('https://images.unsplash.com/photo-1606933988322-a3cb8968e5ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+  background-size: 100%;
+}
+.show-day-body {
+  background-image: url('https://images.unsplash.com/photo-1520004434532-668416a08753?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+  background-size: 100%;
+}
+.edits-body {
+  background-image: url('https://images.unsplash.com/photo-1575330719343-23de81f5b995?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80');
+  background-size: 100%;
+}
+.new-events-body {
+  background-image: url('https://images.unsplash.com/photo-1580637250481-b78db3e6f84b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80');
+  background-size: 100%;
+}
