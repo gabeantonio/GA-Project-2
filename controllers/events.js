@@ -7,7 +7,6 @@ module.exports = {
 
 function newEvent(req, res) {
     Trip.findById(req.params.id, function (err, tripDocument) {
-        console.log(tripDocument, '<--- TRIP')
         const itinerary = tripDocument.itinerary.id(req.params.dayId)
         res.render('events/new-events.ejs', { title: 'Trip', trip: tripDocument, itinerary })
     })
@@ -17,11 +16,7 @@ function newEvent(req, res) {
 function create(req, res) {
 
     Trip.findById(req.params.id, function (err, tripDocument) {
-        console.log(tripDocument, '<----- TRIP!!!!!!');
-        console.log(req.params.dayId, '<------ REQ PARAMS DAY ID')
-        let dayDocument = tripDocument.itinerary.id(req.params.dayId)
-        console.log(dayDocument, '<---- DAY DOCUMENT')
-        console.log(req.params.dayId, '<---- DAY ID')
+        let dayDocument = tripDocument.itinerary.id(req.params.dayId);
         dayDocument.events.push(req.body);
         tripDocument.save(function (err) {
             if (err) {
